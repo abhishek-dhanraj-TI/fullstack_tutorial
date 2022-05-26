@@ -1,0 +1,12 @@
+services:
+  api:
+    build: ./backend
+    image: react-flask-app-api
+    ports:
+      - "5000:5000"
+
+  client:
+    build: ./frontend
+    image: react-flask-app-client
+    ports:
+      - "3000:3000"
