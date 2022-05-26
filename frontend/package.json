@@ -6,13 +6,14 @@
   "dependencies": {
     "bootstrap": "^4.6.0",
     "gh-pages": "^2.2.0",
+    "new-package": "^0.1.0",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "react-scripts": "3.0.1",
     "reactstrap": "^8.9.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "react-scripts --openssl-legacy-provider start",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",

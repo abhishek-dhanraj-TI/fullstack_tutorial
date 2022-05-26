@@ -39,7 +39,7 @@ class App extends React.Component {
 
   // ######################### click handler ###########################
   handleClick(event) {
-    const serverUrl = "http://localhost:5000/keys";
+    const serverUrl = "https://5000-tan-cuckoo-4j2psk9k.ws.trilogy.devspaces.com/";
     const debugUrl = "http://localhost:5000/debug";
     const buttonId = event.target.id;
     let state = this.state
@@ -54,7 +54,7 @@ class App extends React.Component {
             })
       })
       .then(response => {
-        // console.log(response);
+        console.log(response);
         state["httpStatus"] = response.status;
         state["errorMsg"] = response.statusText;
         if (response.status < 300) {
@@ -63,7 +63,7 @@ class App extends React.Component {
         return {}
       })
       .then(object => {
-          // console.log(object);
+          console.log(object);
           if (state["httpStatus"] < 300) {
             state["key"] = object["key"];
             state["firstName"] = object["firstName"];
@@ -72,7 +72,7 @@ class App extends React.Component {
           this.setState(state);
       })
       .catch(error => {
-        // console.log(error);
+        console.log(error);
         state["errorMsg"] = error;
         this.setState(state);
       });    
@@ -84,7 +84,7 @@ class App extends React.Component {
         method: 'GET'
       })
       .then(response => {
-        // console.log(response);
+        console.log(response);
         state["httpStatus"] = response.status;
         state["errorMsg"] = response.statusText;
         if (response.status < 300) {
@@ -93,7 +93,7 @@ class App extends React.Component {
         return {}
       })
       .then(object => {
-          // console.log(object);
+          console.log(object);
           if (state["httpStatus"] < 300) {
             state["key"] = object["key"];
             state["firstName"] = object["firstName"];
@@ -105,7 +105,7 @@ class App extends React.Component {
           this.setState(state);
       })
       .catch(error => {
-        // console.log(error);
+        console.log(error);
         state["firstName"] = "";
         state["lastName"] = "";
         state["errorMsg"] = error;
@@ -123,7 +123,7 @@ class App extends React.Component {
             })
       })
       .then(response => {
-        // console.log(response);
+        console.log(response);
         state["httpStatus"] = response.status;
         state["errorMsg"] = response.statusText;
         if (response.status < 300) {
@@ -132,7 +132,7 @@ class App extends React.Component {
         return {}
       })
       .then(object => {
-          // console.log(object);
+          console.log(object);
           if (state["httpStatus"] < 300) {
             state["key"] = object["key"];
             state["firstName"] = object["firstName"];
@@ -141,7 +141,7 @@ class App extends React.Component {
           this.setState(state);
       })
       .catch(error => {
-        // console.log(error);
+        console.log(error);
         state["errorMsg"] = error;
         this.setState(state);
       });    
@@ -153,7 +153,7 @@ class App extends React.Component {
         method: 'DELETE'
       })
       .then(response => {
-        // console.log(response);
+        console.log(response);
         state["httpStatus"] = response.status;
         state["errorMsg"] = response.statusText;
         if (response.status < 300) {
@@ -162,7 +162,7 @@ class App extends React.Component {
         return {}
       })
       .then(object => {
-          // console.log(object);
+          console.log(object);
           if (state["httpStatus"] < 300) {
             state["key"] = object["key"];
             state["firstName"] = object["firstName"];
@@ -171,7 +171,7 @@ class App extends React.Component {
           this.setState(state);
       })
       .catch(error => {
-        // console.log(error);
+        console.log(error);
         state["errorMsg"] = error;
         this.setState(state);
       });    
@@ -183,7 +183,7 @@ class App extends React.Component {
         method: 'GET'
       })
       .then(response => {
-        // console.log(response);
+        console.log(response);
         state["httpStatus"] = response.status;
         state["errorMsg"] = response.statusText;
         if (response.status < 300) {
@@ -192,14 +192,14 @@ class App extends React.Component {
         return {}
       })
       .then(object => {
-          // console.log(object);
+          console.log(object);
           if (state["httpStatus"] < 300) {
             state["errorMsg"] = JSON.stringify(object);
           }
           this.setState(state);
       })
       .catch(error => {
-        // console.log(error);
+        console.log(error);
         state["firstName"] = "";
         state["lastName"] = "";
         state["errorMsg"] = error;
