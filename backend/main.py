@@ -20,6 +20,16 @@ model = Model()
 ##########################  API Implementation #########################
 # https://github.com/Jiangyiqun/fullstack_tutorial/tree/master/documentation
 ############################## create name #############################
+from datetime import timedelta
+from flask import make_response, request, current_app
+from functools import update_wrapper
+
+
+
+@app.route('/')
+def hello():
+    return "<h1>Hello World</h1>"
+
 
 @app.route('/keys', methods = ["POST"])
 def create_name():
